@@ -131,24 +131,39 @@ a:focus {
   width: 100%;
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  gap: 50px;
+  padding-top: 12%;
 }
 
 .about-card {
   width: 20%;
+  height: fit-content;
   border-radius: 12px;
-  background-color: hsl(0, 0%, 5%);
+  background-color: hsl(0, 0%, 15%);
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  border: 1px solid hsl(0, 0%, 80%);
-  padding-block: 20px;
+  padding: 20px 10px;
+  box-shadow: 0 0 10px 5px black;
 }
 
-.about-card > img {
+.card-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: inherit;
+}
+.infos-container {
+  margin-left: 10px;
+  width: 100%;
+  background-color: inherit;
+}
+
+.profile-img {
   display: block;
+  margin-right: auto;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -159,13 +174,13 @@ a:focus {
 
 .infos {
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   background-color: inherit;
   display: flex;
   align-items: center;
 }
 
-.about-card > span > img {
+span > img {
   width: 50px;
   background-color: transparent;
 }
@@ -176,6 +191,7 @@ a:focus {
   display: flex;
   align-items: center;
   font-size: 2rem;
+  margin-top: 20px;
 }
 
 .technologies-container {
@@ -183,7 +199,7 @@ a:focus {
   width: 100%;
   display: grid;
   justify-content: center;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   row-gap: 30px;
   column-gap: 20px;
   padding-top: 10px;
@@ -193,4 +209,40 @@ a:focus {
   background-color: inherit;
   width: 50px;
   height: 50px;
+}
+
+.balloon {
+  border: 1px solid white;
+  background-color: hsl(0, 0%, 5%);
+  width: 700px;
+  height: fit-content;
+  position: relative;
+  border-radius: 20px;
+  margin-top: 60px;
+  padding: 15px 25px;
+}
+
+.balloon > p {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.balloon::before {
+  content: '';
+  position: absolute;
+  background-color: transparent;
+  border: 42px solid transparent;
+  border-top-color: white;
+  right: -43px;
+  top: -1px;
+}
+
+.balloon::after {
+  content: '';
+  position: absolute;
+  background-color: transparent;
+  border: 45px solid transparent;
+  border-top-color: hsl(0, 0%, 5%);
+  right: -40px;
+  top: 0;
 }
