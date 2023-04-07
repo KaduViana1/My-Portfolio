@@ -13,7 +13,7 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Me</a></li>
-          <li><a href="">Projects</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="">Contact</a></li>
         </ul>
       </nav>
@@ -68,9 +68,86 @@
           <img src="./Assets/react.png" alt="React Icon" />
           <img src="./Assets/node.png" alt="Node Icon" />
           <img src="./Assets/mysql.png" alt="MySQL Icon" />
-          <img src="./Assets/git.png" alt="git Icon" />
+          <img src="./Assets/mongodb.png" alt="MongoDB Icon" />
+          <img src="./Assets/git.png" alt="Git Icon" />
         </div>
       </div>
+      <svg class="arrows">
+        <a href="#projects">
+          <path class="a1" d="M0 0 L30 32 L60 0"></path>
+          <path class="a2" d="M0 20 L30 52 L60 20"></path>
+          <path class="a3" d="M0 40 L30 72 L60 40"></path>
+        </a>
+      </svg>
+    </section>
+    <section class="projects" id="projects">
+      <div class="modal">
+        <span class="closeModal">&times;</span>
+        <img src="./Assets/Project-Youtube-PS.png" alt="" />
+      </div>
+      <h1>My Projects</h1>
+      <div class="project-container">
+        <img
+          data-modal-img="./Assets/Project-Youtube-PS.png"
+          src="./Assets/Project-Youtube-PS.png"
+          alt="My Clone of YouTube Site"
+        />
+        <div class="project-description">
+          <p>
+            A clone of YouTube's homepage desktop version made with Typescript
+            React.js using styled components and react-router-dom, with
+            side-bar, configurations dropdown where you can toggle dark/light
+            themes that stays saved to local storage.
+          </p>
+          <p>
+            The application is connected to an API to provide user creation,
+            user authentication and creation of "template-videos" for the search
+            page.
+          </p>
+          <p>
+            On the back-end I used Node.js express with typescript, MySQL as
+            database for users data and videos templates, uuid to generate
+            random ids for users and videos, bycript tu encrypt users passwords,
+            jsonwebtoken to create a token that expires in 30 days for user
+            authentication.
+          </p>
+        </div>
+      </div>
+      <div class="project-container">
+        <img
+          data-modal-img="./Assets/Project-Batman-PS.png"
+          src="./Assets/Project-Batman-PS.png"
+          alt="A site of the batman 2022 movie"
+        />
+        <div class="project-description">
+          <p>
+            A React.js built application to simulate an website for advertising
+            and selling tickets to the 2022 batman movie.
+          </p>
+          <p>
+            The site is responsive to smaller devices and contains four pages:
+          </p>
+          <p>
+            Home page with the movie trailer, description and main characters
+            cards;
+          </p>
+          <p>Contact page with a simple form for contact;</p>
+          <p>Photos page with a carousel from movie's photos;</p>
+          <p>
+            Comments page where you can add comments, simulationg a connection
+            with a database.
+          </p>
+        </div>
+      </div>
+      <h2>Some small projects from Front-End Mentor</h2>
+      <div class="small-projects"></div>
+      <svg class="arrows">
+        <a href="#contact">
+          <path class="a1" d="M0 0 L30 32 L60 0"></path>
+          <path class="a2" d="M0 20 L30 52 L60 20"></path>
+          <path class="a3" d="M0 40 L30 72 L60 40"></path>
+        </a>
+      </svg>
     </section>
   </body>
 </html>

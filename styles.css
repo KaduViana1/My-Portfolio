@@ -8,11 +8,11 @@
   box-sizing: border-box;
   font-family: 'Alkatra', cursive;
   background-color: hsl(0, 0%, 5%);
+  color: white;
 }
 
 li {
   list-style: none;
-  color: white;
 }
 
 header {
@@ -32,11 +32,6 @@ a {
   text-decoration: none;
   transition: 0.5s;
   outline: transparent;
-}
-
-a,
-a:visited {
-  color: white;
 }
 
 a:hover,
@@ -61,7 +56,6 @@ a:focus {
 
 .home > h1 {
   font-size: 4rem;
-  color: white;
   background-color: transparent;
   padding-inline: 10px;
 }
@@ -72,6 +66,7 @@ a:focus {
   background-color: transparent;
   position: absolute;
   bottom: 20px;
+  left: 50%;
 }
 
 .arrows path {
@@ -134,6 +129,7 @@ a:focus {
   justify-content: center;
   gap: 50px;
   padding-top: 12%;
+  position: relative;
 }
 
 .about-card {
@@ -173,7 +169,6 @@ a:focus {
 }
 
 .infos {
-  color: #fff;
   font-size: 1.1rem;
   background-color: inherit;
   display: flex;
@@ -186,7 +181,6 @@ span > img {
 }
 
 .technologies {
-  color: #fff;
   background-color: inherit;
   display: flex;
   align-items: center;
@@ -224,7 +218,6 @@ span > img {
 
 .balloon > p {
   font-size: 1.5rem;
-  color: white;
 }
 
 .balloon::before {
@@ -245,4 +238,81 @@ span > img {
   border-top-color: hsl(0, 0%, 5%);
   right: -40px;
   top: 0;
+}
+
+.projects {
+  width: 100%;
+  height: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 25px;
+  position: relative;
+}
+
+.projects > h1 {
+  margin-top: 15px;
+  font-size: 3rem;
+}
+
+.projects > h2 {
+  margin-top: 15px;
+  font-size: 2rem;
+}
+
+.project-container {
+  width: 70%;
+  height: 200px;
+  background-color: hsl(0, 0%, 15%);
+  box-shadow: 0 0 5px 5px black;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+}
+
+.project-container > img {
+  cursor: pointer;
+}
+
+.project-description {
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.project-description > p {
+  background-color: inherit;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal > img {
+  width: 65%;
+}
+
+.closeModal {
+  font-size: 4rem;
+  background-color: inherit;
+  position: absolute;
+  right: 5rem;
+  top: 0;
+  cursor: pointer;
+}
+
+.small-projects {
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
