@@ -11,6 +11,11 @@
   color: white;
 }
 
+:root {
+  --cards-background: hsl(0, 0%, 15%);
+  --cards-box-shadow: 0 0 10px 5px black;
+}
+
 li {
   list-style: none;
 }
@@ -67,6 +72,7 @@ a:focus {
   position: absolute;
   bottom: 20px;
   left: 50%;
+  transform: translateX(-50%);
 }
 
 .arrows path {
@@ -136,12 +142,12 @@ a:focus {
   width: 20%;
   height: fit-content;
   border-radius: 12px;
-  background-color: hsl(0, 0%, 15%);
+  background-color: var(--cards-background);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px 10px;
-  box-shadow: 0 0 10px 5px black;
+  box-shadow: var(--cards-box-shadow);
 }
 
 .card-header {
@@ -207,7 +213,6 @@ span > img {
 
 .balloon {
   border: 1px solid white;
-  background-color: hsl(0, 0%, 5%);
   width: 700px;
   height: fit-content;
   position: relative;
@@ -263,8 +268,8 @@ span > img {
 .project-container {
   width: 70%;
   height: 200px;
-  background-color: hsl(0, 0%, 15%);
-  box-shadow: 0 0 5px 5px black;
+  background-color: var(--cards-background);
+  box-shadow: var(--cards-box-shadow);
   border-radius: 15px;
   padding: 15px;
   display: flex;
@@ -313,6 +318,33 @@ span > img {
 }
 
 .small-projects {
+  width: 70%;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+}
+
+.small-project {
+  background-color: var(--cards-background);
+  box-shadow: var(--cards-box-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  gap: 15px;
+}
+
+.small-project > a {
+  background-color: inherit;
+}
+
+.small-project img {
+  width: 400px;
+  aspect-ratio: 16 / 9;
+}
+
+.small-project p {
+  background-color: inherit;
+  margin-right: auto;
 }
