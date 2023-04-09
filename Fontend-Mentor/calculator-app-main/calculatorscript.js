@@ -20,6 +20,7 @@ let results = '0';
 let operator = '=';
 let value1 = 0;
 let value2 = 0;
+let preventor = null;
 
 function calculate() {
   switch (operator) {
@@ -37,6 +38,7 @@ function calculate() {
       break;
     default:
   }
+
   value1 = Number.parseFloat(result.innerText);
 }
 
@@ -44,9 +46,12 @@ function setXY() {
   value2 = 0;
   value1 = Number.parseFloat(result.innerText);
   results = 0;
+  preventor = true;
 }
 
 function displayNumber(x) {
+  preventor = false;
+
   if (results == 0 || result.innerText == '0') {
     results = 1;
     return (result.innerText = x);
@@ -93,18 +98,50 @@ buttondot.addEventListener('click', () => {
   }
 });
 buttonplus.addEventListener('click', () => {
+  if (preventor === false) {
+    if (value2 == 0) {
+      value2 = Number.parseFloat(result.innerText);
+      calculate();
+    } else {
+      calculate();
+    }
+  }
   operator = '+';
   setXY();
 });
 buttonminus.addEventListener('click', () => {
+  if (preventor === false) {
+    if (value2 == 0) {
+      value2 = Number.parseFloat(result.innerText);
+      calculate();
+    } else {
+      calculate();
+    }
+  }
   operator = '-';
   setXY();
 });
 buttonx.addEventListener('click', () => {
+  if (preventor === false) {
+    if (value2 == 0) {
+      value2 = Number.parseFloat(result.innerText);
+      calculate();
+    } else {
+      calculate();
+    }
+  }
   operator = 'x';
   setXY();
 });
 buttondivide.addEventListener('click', () => {
+  if (preventor === false) {
+    if (value2 == 0) {
+      value2 = Number.parseFloat(result.innerText);
+      calculate();
+    } else {
+      calculate();
+    }
+  }
   operator = '/';
   setXY();
 });
@@ -122,6 +159,7 @@ buttonequal.addEventListener('click', function equal() {
   } else {
     calculate();
   }
+  preventor = true;
 });
 buttondel.addEventListener('click', () => {
   if (result.innerText == '0' || result.innerText.length == 1) {
