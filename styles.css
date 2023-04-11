@@ -134,7 +134,7 @@ a:focus {
   display: flex;
   justify-content: center;
   gap: 50px;
-  padding-top: 8%;
+  padding-top: 6%;
   position: relative;
 }
 
@@ -221,6 +221,12 @@ span > img {
   padding: 15px 25px;
 }
 
+.balloon-animation {
+  animation-name: balloonScale;
+  animation-duration: 1s;
+  transform-origin: top right;
+}
+
 .balloon > p {
   font-size: 1.5rem;
 }
@@ -252,7 +258,7 @@ span > img {
   align-items: center;
   row-gap: 25px;
   position: relative;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 
 .projects > h1 {
@@ -395,4 +401,13 @@ span > img {
   background-color: inherit;
   font-size: 1.2rem;
   margin-top: 15px;
+}
+
+@keyframes balloonScale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
